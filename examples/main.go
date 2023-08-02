@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/pytimer/win-netstat"
+	winnetstat "github.com/jefferai/win-netstat"
 )
 
 func tcp4() {
@@ -14,7 +14,6 @@ func tcp4() {
 	}
 	for _, conn := range conns {
 		fmt.Printf("%s:%d\t%d\t%s\n", conn.LocalAddr, conn.LocalPort, conn.OwningPid, conn.State)
-
 	}
 }
 
